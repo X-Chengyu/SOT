@@ -53,7 +53,7 @@ const scoringCategories = [
     5, -5, 5, 1, 2, -1, -1, -1, 3, 1,
     2, 3, -1, 4, 4
 ];
-const totalScore = { 1: 40, 2: 40, 3: 40, 4: 30, 5: 10 };
+const totalScore = 160;
 
 const dimension = [
     "维度一：性吸引力（Sexual Attraction）",
@@ -132,11 +132,11 @@ function showResult() {
     }
 
     let resultText = "📋根据您的回答，这是对您性取向的一些探索性分析：\n\n";
-    resultText += `💑异性恋倾向：${Math.round(score[1] / totalScore[1] * 100)}%\n`;
-    resultText += `🧑‍🤝‍🧑同性恋倾向：${Math.round(score[2] / totalScore[2] * 100)}%\n`;
-    resultText += `👪双/泛性恋倾向：${Math.round(score[3] / totalScore[3] * 100)}%\n`;
-    resultText += `👨无性恋倾向：${Math.round(score[4] / totalScore[4] * 100)}%\n`;
-    resultText += `👩‍👧‍👦流性恋倾向：${Math.round(score[5] / totalScore[5] * 100)}%\n`;
+    resultText += `💑异性恋倾向：${Math.round(score[1] / totalScore * 100)}%\n`;
+    resultText += `🧑‍🤝‍🧑同性恋倾向：${Math.round(score[2] / totalScore * 100)}%\n`;
+    resultText += `👪双/泛性恋倾向：${Math.round(score[3] / totalScore * 100)}%\n`;
+    resultText += `👨无性恋倾向：${Math.round(score[4] / totalScore * 100)}%\n`;
+    resultText += `👩‍👧‍👦流性恋倾向：${Math.round(score[5] / totalScore * 100)}%\n`;
     resultText += `\n❗请注意：这只是一个简单测试，真实的性取向是一个复杂的、多维度的自我认知过程。`;
 
 
