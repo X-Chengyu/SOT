@@ -1,0 +1,126 @@
+body {
+    font-family: 微软雅黑;
+    background-color: #ede7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #dbdbdb;
+}
+
+#home-screen,
+#result-screen {
+    display: none;
+}
+
+#home-screen h1 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#home-screen p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+#quiz-screen {
+    display: none;
+}
+
+.question-card {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.question-text-dimension {
+    font-size: 15px;
+    color: #8e63cd;
+    margin-top: 10px;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+.question-text {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.options-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option-button {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s, border-color 0.2s;
+    text-align: center;
+}
+
+.option-button:hover {
+    background-color: #e5e5e5;
+    border-color: #ccc;
+}
+
+.progress {
+    margin-top: 25px;
+    color: #999;
+    font-size: 14px;
+}
+
+.primary-button {
+    background-color: #d0b0ff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.primary-button:hover {
+    background-color: #b290e5;
+}
+
+#result-screen h2 {
+    color: #ab73ff;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+#final-result {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 30px;
+    white-space: pre-wrap;
+    text-align: left;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    border-radius: 6px;
+}

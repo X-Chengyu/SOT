@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>性取向测试</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="home-screen">
+            <h1>🌈 性取向测试</h1>
+            <p>本测试将用一些选择题来检测您的性取向。</p>
+            <button class="primary-button" onclick="startQuiz()">开始测试</button>
+        </div>
+
+        <div id="quiz-screen">
+            <div class="question-card">
+                <div class="question-text-dimension" id="question-text-dimension"></div>
+                <div class="question-text" id="question-text"></div>
+                <div class="options-group" id="options-group">
+                </div>
+            </div>
+            <div class="progress" id="progress-text"></div>
+        </div>
+
+        <div id="result-screen">
+            <h2>🎉 测试完成！</h2>
+            <div id="final-result"></div>
+            <button class="primary-button" onclick="window.location.reload()">重新测试</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
