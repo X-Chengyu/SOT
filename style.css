@@ -1,12 +1,56 @@
+/*
+ * =======================================================
+ * === 字体定义：引用自定义字体文件 (保持不变) ===
+ * =======================================================
+ */
+
+/* 中文字体：SmileySans-Oblique.otf、AlibabaPuHuiTi-3-55-Regular */
+@font-face {
+    font-family: 'SmileySans'; 
+    src: url('fonts/SmileySans-Oblique.otf') format('opentype'); 
+    font-weight: normal; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AlibabaPuHuiTi-3-55-Regular';
+    src: url('fonts/AlibabaPuHuiTi-3-55-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 日文字体：Makinas-Flat-3-2.otf */
+@font-face {
+    font-family: 'MakinasFlat';
+    src: url('fonts/Makinas-Flat-3-2.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* =======================================================
+ * === 核心布局修改（解决居中问题） ===
+ * =======================================================
+ */
+
 body {
-    font-family: 微软雅黑;
-    background-color: #ede7f6;
+    /* 允许内容自然流向，避免与 fixed header 冲突 */
+    font-family: 'SmileySans', 'AlibabaPuHuiTi-3-55-Regular', "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #ede7f6;
     min-height: 100vh;
     margin: 0;
-    padding: 20px;
+    padding: 0; 
+}
+
+html[lang="jp"] body {
+    font-family: 'MakinasFlat', "Meiryo", "Yu Gothic", sans-serif;
+}
+
+button {
+    font-family: 'AlibabaPuHuiTi-3-55-Regular', "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
 }
 
 .container {
@@ -17,12 +61,50 @@ body {
     width: 100%;
     text-align: center;
     border: 1px solid #dbdbdb;
+    
+    /* 关键修正1: 使用 margin: 0 auto; 实现水平居中 */
+    margin: auto;
+    /* 关键修正2: 为 fixed Header 预留顶部空间（约 60px - 80px 足够） */
+    
+    display: block;
+    /* 容器居中布局完成 */
 }
 
-#home-screen,
-#result-screen {
-    display: none;
+/* Header 样式 (确保它固定在顶部并铺满宽度) */
+.header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0; /* 确保 header 铺满宽度 */
+    z-index: 1000; 
+    
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center;
+    padding: 15px 20px;
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: #ffffff;
 }
+
+.header label {
+    font-family: 'AlibabaPuHuiTi-3-55-Regular', "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    margin-right: 10px;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.header select {
+    font-family: 'AlibabaPuHuiTi-3-55-Regular', "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    font-size: 1em;
+    color: #666;
+}
+
+/* * =======================================================
+ * === 组件样式 (保持不变) ===
+ * =======================================================
+ */
 
 #home-screen h1 {
     color: #333;
@@ -91,6 +173,7 @@ body {
     font-size: 14px;
 }
 
+
 .primary-button {
     background-color: #d0b0ff;
     color: white;
@@ -106,6 +189,10 @@ body {
 
 .primary-button:hover {
     background-color: #b290e5;
+}
+
+#result-screen {
+    display: none;
 }
 
 #result-screen h2 {
