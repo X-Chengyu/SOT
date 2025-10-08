@@ -125,7 +125,6 @@ const quizData = {
             { "label": "I have had sexual contact/intimacy with people of different genders, and the experience feels similar.", "dimension": 4 },
             { "label": "Regardless of the person's gender, I value emotional connection and trust more in sexual contact.", "dimension": 4 },
             { "label": "I do not seek or desire sexual contact/intimacy with anyone.", "dimension": 4 },
-
             { "label": "I find that friend groups of the opposite/different gender make me feel a stronger sense of belonging.", "dimension": 5 },
             { "label": "I find that friend groups of the same/similar gender make me feel a stronger sense of belonging.", "dimension": 5 },
             { "label": "When discussing sexual orientation, I tend to avoid labeling myself.", "dimension": 5 },
@@ -135,7 +134,6 @@ const quizData = {
             { "label": "If I were to choose, I would prefer to appear in public with a same/similar gender partner.", "dimension": 5 },
             { "label": "I actively disclose or hint to friends or family about my interest in the opposite/different gender.", "dimension": 5 },
             { "label": "I actively disclose or hint to friends or family about my interest in the same/similar gender.", "dimension": 5 },
-
             { "label": "In my image of an ideal long-term partner, their gender characteristics are clear (e.g., masculine or feminine traits).", "dimension": 6 },
             { "label": "In my image of an ideal long-term partner, their gender characteristics are unimportant.", "dimension": 6 },
             { "label": "If I had a 'perfect' date, they would be the opposite/different gender.", "dimension": 6 },
