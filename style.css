@@ -4,17 +4,18 @@
  * =======================================================
  */
 
-/* 中文字体：SmileySans-Oblique.otf、AlibabaPuHuiTi-3-55-Regular */
-@font-face {
-    font-family: 'SmileySans'; 
-    src: url('fonts/SmileySans-Oblique.otf') format('opentype'); 
-    font-weight: normal; 
-    font-style: normal;
-}
-
+/* 通用字体：AlibabaPuHuiTi-3-55-Regular.otf */
 @font-face {
     font-family: 'AlibabaPuHuiTi-3-55-Regular';
     src: url('fonts/AlibabaPuHuiTi-3-55-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 中文字体：SmileySans-Oblique.otf */
+@font-face {
+    font-family: 'SmileySans';
+    src: url('fonts/SmileySans-Oblique.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -27,6 +28,13 @@
     font-style: normal;
 }
 
+/* 英文字体：Rajdhani-Regular.otf */
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('fonts/Rajdhani-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* =======================================================
  * === 核心布局修改（解决居中问题） ===
@@ -42,11 +50,15 @@ body {
     background-color: #ede7f6;
     min-height: 100vh;
     margin: 0;
-    padding: 0; 
+    padding: 0;
 }
 
 html[lang="jp"] body {
     font-family: 'MakinasFlat', "Meiryo", "Yu Gothic", sans-serif;
+}
+
+html[lang="en"] body {
+    font-family: 'Rajdhani', Arial, Helvetica, sans-serif;
 }
 
 button {
@@ -61,25 +73,26 @@ button {
     width: 100%;
     text-align: center;
     border: 1px solid #dbdbdb;
-    
+
     /* 关键修正1: 使用 margin: 0 auto; 实现水平居中 */
     margin: auto;
     /* 关键修正2: 为 fixed Header 预留顶部空间（约 60px - 80px 足够） */
-    
+
     display: block;
     /* 容器居中布局完成 */
 }
 
 /* Header 样式 (确保它固定在顶部并铺满宽度) */
 .header {
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0; /* 确保 header 铺满宽度 */
-    z-index: 1000; 
-    
-    display: flex; 
-    justify-content: flex-end; 
+    right: 0;
+    /* 确保 header 铺满宽度 */
+    z-index: 1000;
+
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
     padding: 15px 20px;
     width: 100%;

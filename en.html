@@ -1,66 +1,54 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>界面开发中 (Under Development)</title>
-    <style>
-        body {
-            background-color: #007bff; 
-            color: white; 
-            font-family: Arial, sans-serif;
 
-            margin: 0;
-            height: 100vh; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            text-align: center; 
-        }
+    <title>Sexual orientation test</title>
 
-        .content-box {
-            max-width: 90%;
-            padding: 20px;
-        }
-
-        .main-text {
-            font-size: 3.5em; 
-            font-weight: bold;
-            margin-bottom: 25px; 
-            line-height: 1.2;
-        }
-
-        .translation-text {
-            font-size: 1.5em; 
-            opacity: 0.9; 
-        }
-
-        .translation-text p {
-            margin: 8px 0; 
-        }
-
-        /* 适应小屏幕 */
-        @media (max-width: 600px) {
-            .main-text {
-                font-size: 2em;
-            }
-            .translation-text {
-                font-size: 1em; 
-            }
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
 
-    <div class="content-box">
-        <div class="main-text">
-           ：（ 非常抱歉：当前界面还在开发中！
+<body>
+    <header class="header">
+        <label for="language-select">Language:</label>
+        <select id="language-select" name="language-select" onchange="changeLanguage(this.value)">
+            <option value="zh-CN">简体中文</option>
+            <option value="jp">日本語</option>
+            <option value="en" selected>English</option>
+        </select>
+    </header>
+
+    <div class="container">
+
+        <div id="home-screen">
+            <h1>🌈 Sexual Orientation Test</h1>
+            <p>This test will use a series of multiple-choice questions to determine your sexual orientation.</p>
+            <button class="primary-button" onclick="startQuiz()">Start Test</button>
         </div>
-        <div class="translation-text">
-            <p><strong>日本語 </strong> 大変申し訳ありませんが、このタブは現在開発中です！</p>
-            <p><strong>English </strong> We are very sorry: this page is currently under development!</p>
+
+        <div id="quiz-screen">
+            <div class="question-card">
+                <div class="question-text-dimension" id="question-text-dimension"></div>
+                <div class="question-text" id="question-text"></div>
+                <div class="options-group" id="options-group">
+                </div>
+            </div>
+            <div class="progress" id="progress-text"></div>
         </div>
+
+        <div id="result-screen">
+            <h2 id="result-screen-title">🎉 Test Completed! </h2>
+            <div id="final-result"></div>
+            <button class="primary-button" onclick="window.location.reload()">Retest</button>
+        </div>
+
     </div>
 
+    <script src="click.js"></script>
+    <script src="language.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

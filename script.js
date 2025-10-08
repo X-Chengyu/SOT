@@ -94,6 +94,56 @@ const quizData = {
             { "label": "パートナーには、私がすべての性別に潜在的な魅力を感じることへの理解をより強く望む。", "dimension": 6 },
             { "label": "パートナーが、私が性的な魅力をあまり感じないという事実を受け入れてくれることを望みますか。", "dimension": 6 },
             { "label": "理想的な状況下では、満たされていると感じるために性的または恋愛関係は必要ありませんか。", "dimension": 6 }
+        ],
+    "en":
+        [
+            { "label": "I feel a strong sexual excitement or desire when seeing a body of the opposite/different gender.", "dimension": 1 },
+            { "label": "I feel a strong sexual excitement or desire when seeing a body of the same/similar gender.", "dimension": 1 },
+            { "label": "When I feel sexual attraction, the gender of the person matters to me.", "dimension": 1 },
+            { "label": "When I feel sexual attraction, the gender of the person is unimportant; I am attracted by deeper personality traits.", "dimension": 1 },
+            { "label": "I find myself being attracted to people of all genders.", "dimension": 1 },
+            { "label": "I rarely or almost never feel sexual attraction toward anyone.", "dimension": 1 },
+            { "label": "Kissing or intimate contact with an opposite/different gender person makes me feel sexually excited.", "dimension": 1 },
+            { "label": "Kissing or intimate contact with a same/similar gender person makes me feel sexually excited.", "dimension": 1 },
+            { "label": "I desire to form a deep, long-term romantic relationship with the opposite/different gender.", "dimension": 2 },
+            { "label": "I desire to form a deep, long-term romantic relationship with the same/similar gender.", "dimension": 2 },
+            { "label": "I can imagine myself falling in love with people of any gender.", "dimension": 2 },
+            { "label": "I am not interested in romantic relationships; I prefer platonic friendships or independence.", "dimension": 2 },
+            { "label": "I find myself romantically attracted to partners of a specific gender (e.g., wanting to hold hands, date, share a future).", "dimension": 2 },
+            { "label": "I find myself romantically attracted to partners regardless of gender.", "dimension": 2 },
+            { "label": "My sexual fantasies primarily revolve around the opposite/different gender.", "dimension": 3 },
+            { "label": "My sexual fantasies primarily revolve around the same/similar gender.", "dimension": 3 },
+            { "label": "Objects of all genders may appear in my sexual fantasies, with no obvious preference.", "dimension": 3 },
+            { "label": "I have sexual fantasies, but they do not involve any specific person or gender (e.g., focus on feelings, movements).", "dimension": 3 },
+            { "label": "I have few or almost no sexual fantasies.", "dimension": 3 },
+            { "label": "In my fantasies, the person I actively play the primary role with is the opposite/different gender.", "dimension": 3 },
+            { "label": "In my fantasies, the person I actively play the primary role with is the same/similar gender.", "dimension": 3 },
+            { "label": "In the past year, I have had sexual contact/intimacy (including but not limited to intercourse, deep kissing) with the opposite/different gender.", "dimension": 4 },
+            { "label": "In the past year, I have had sexual contact/intimacy (including but not limited to intercourse, deep kissing) with the same/similar gender.", "dimension": 4 },
+            { "label": "If conditions permit, I would be willing to engage in sexual contact/intimacy with the opposite/different gender.", "dimension": 4 },
+            { "label": "If conditions permit, I would be willing to engage in sexual contact/intimacy with the same/similar gender.", "dimension": 4 },
+            { "label": "I have had sexual contact/intimacy with people of different genders, and the experience feels similar.", "dimension": 4 },
+            { "label": "Regardless of the person's gender, I value emotional connection and trust more in sexual contact.", "dimension": 4 },
+            { "label": "I do not seek or desire sexual contact/intimacy with anyone.", "dimension": 4 },
+
+            { "label": "I find that friend groups of the opposite/different gender make me feel a stronger sense of belonging.", "dimension": 5 },
+            { "label": "I find that friend groups of the same/similar gender make me feel a stronger sense of belonging.", "dimension": 5 },
+            { "label": "When discussing sexual orientation, I tend to avoid labeling myself.", "dimension": 5 },
+            { "label": "I believe my sexual orientation has not changed over the years.", "dimension": 5 },
+            { "label": "I believe my sexual orientation is fluid and changing.", "dimension": 5 },
+            { "label": "If I were to choose, I would prefer to appear in public with an opposite/different gender partner.", "dimension": 5 },
+            { "label": "If I were to choose, I would prefer to appear in public with a same/similar gender partner.", "dimension": 5 },
+            { "label": "I actively disclose or hint to friends or family about my interest in the opposite/different gender.", "dimension": 5 },
+            { "label": "I actively disclose or hint to friends or family about my interest in the same/similar gender.", "dimension": 5 },
+
+            { "label": "In my image of an ideal long-term partner, their gender characteristics are clear (e.g., masculine or feminine traits).", "dimension": 6 },
+            { "label": "In my image of an ideal long-term partner, their gender characteristics are unimportant.", "dimension": 6 },
+            { "label": "If I had a 'perfect' date, they would be the opposite/different gender.", "dimension": 6 },
+            { "label": "If I had a 'perfect' date, they would be the same/similar gender.", "dimension": 6 },
+            { "label": "If I had a 'perfect' date, their gender would be completely random.", "dimension": 6 },
+            { "label": "I would prefer my partner to understand my potential attraction to all genders.", "dimension": 6 },
+            { "label": "I would prefer my partner to accept the fact that I do not often feel sexual attraction.", "dimension": 6 },
+            { "label": "Ideally, I do not need any sexual or romantic relationship in my life to feel complete.", "dimension": 6 }
         ]
 };
 
@@ -110,7 +160,7 @@ const dimension = {
         [
             "维度一：性吸引力（Sexual Attraction）",
             "维度二：情感依恋与浪漫吸引力（Emotional & Romantic Attraction）",
-            "维度三：性幻想（Sexual Fantasies）", "维度四：行为（Sexual Behavior - 过去与现在）",
+            "维度三：性幻想（Sexual Fantasies）",
             "维度四：行为（Sexual Behavior - 过去与现在）",
             "维度五：社会归属感与身份（Social and Identity）",
             "维度六：理想与渴望（Ideal and Aspiration）"
@@ -123,6 +173,15 @@ const dimension = {
             "次元四：行動（Sexual Behavior - 過去と現在）",
             "次元五：社会的帰属意識とアイデンティティ（Social and Identity）",
             "次元六：理想と願望（Ideal and Aspiration）"
+        ],
+    "en":
+        [
+            "Dimension 1: Sexual Attraction",
+            "Dimension 2: Emotional & Romantic Attraction",
+            "Dimension 3: Sexual Fantasies",
+            "Dimension 4: Sexual Behavior - Past and Present",
+            "Dimension 5: Social and Identity",
+            "Dimension 6: Ideal and Aspiration"
         ]
 };
 
@@ -130,13 +189,17 @@ const options = {
     "zh-CN":
         ["经常", "很少", "从未", "返回"],
     "jp":
-        ["よく当てはまる", "たまに当てはまる", "全く当てはまらない", "戻る"]
+        ["よく当てはまる", "たまに当てはまる", "全く当てはまらない", "戻る"],
+    "en":
+        ["Often", "Rarely", "Never", "Return"]
 };
 const optionScores = {
     "zh-CN":
         { "经常": 5, "很少": 2, "从未": 0, "返回": -1 },
     "jp":
-        { "よく当てはまる": 5, "たまに当てはまる": 2, "全く当てはまらない": 0, "戻る": -1 }
+        { "よく当てはまる": 5, "たまに当てはまる": 2, "全く当てはまらない": 0, "戻る": -1 },
+    "en":
+        { "Often": 5, "Rarely": 2, "Never": 0, "Return": -1 }
 };
 
 // 词汇表
@@ -148,12 +211,11 @@ const vocabulary = {
         'result_bi_pan': '👪双/泛性恋倾向',
         'result_a': '👨无性恋倾向',
         'result_fluid': '👩‍👧‍👦流性恋倾向',
-        'result_opener': '📋根据您的回答，这是对您性取向的一些探索性分析：\n\n',
+        'result_opener': '📋根据您的回答，这是对您性取向的一些探索性分析：\n',
         'disclaimer': '\n❗请注意：这只是一个简单测试，真实的性取向是一个复杂的、多维度的自我认知过程。',
 
         'progress_prefix': '第 ',
         'progress_suffix': ' 题',
-        'lang_label': '请选择您的语言:'
     },
     "jp":
     {
@@ -162,12 +224,24 @@ const vocabulary = {
         'result_bi_pan': '👪バイ・パンセクシュアル傾向',
         'result_a': '👨アセクシュアル傾向',
         'result_fluid': '👩‍👧‍👦流動性傾向',
-        'result_opener': '📋あなたの回答に基づいた、性的指向に関する探索的分析結果です：\n\n',
+        'result_opener': '📋あなたの回答に基づいた、性的指向に関する探索的分析結果です：\n',
         'disclaimer': '\n❗ご注意：これは簡易テストであり、実際の性的指向は複雑で多角的な自己認識のプロセスです。',
 
         'progress_prefix': '質問 ',
         'progress_suffix': '',
-        'lang_label': '言語を選択してください:',
+    },
+    "en":
+    {
+        'result_hetero': '💑Heterosexuality',
+        'result_homo': '🧑‍🤝‍🧑Homosexuality',
+        'result_bi_pan': '👪Bisexuality/Pansexuality',
+        'result_a': '👨Asexuality',
+        'result_fluid': '👩‍👧‍👦Fluidity',
+        'result_opener': '📋Based on your answers, here are some exploratory analyses of your sexual orientation:\n',
+        'disclaimer': '\n❗Please note: This is just a simple test. Your true sexual orientation is a complex, multi-dimensional process of self-awareness. ',
+
+        'progress_prefix': 'Question',
+        'progress_suffix': '',
     }
 }
 
