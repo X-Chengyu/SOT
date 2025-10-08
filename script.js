@@ -295,12 +295,14 @@ function loadQuestion(index) {
     optionsGroup.innerHTML = '';
 
     options[currentLang].forEach(option => {
-        const button = document.createElement('button');
-        button.className = 'option-button';
-        button.textContent = option;
+        if (index >= 1 || optionScores[currentLang][option] != -1) {
+            const button = document.createElement('button');
+            button.className = 'option-button';
+            button.textContent = option;
 
-        button.onclick = () => selectAnswer(optionScores[currentLang][option], index);
-        optionsGroup.appendChild(button);
+            button.onclick = () => selectAnswer(optionScores[currentLang][option], index);
+            optionsGroup.appendChild(button);
+        }
     });
 
     progressText.textContent = `${vocabulary[currentLang].progress_prefix} ${index + 1} / ${totalQuestions} ${vocabulary[currentLang].progress_suffix}`;
@@ -308,10 +310,10 @@ function loadQuestion(index) {
 
 // 答题器
 function selectAnswer(answerScore, index) {
-    if (answerScore == -1 && index >= 1) {
+    if (answerScore == -1) {
         currentQuestionIndex--;
     }
-    else if (answerScore != -1) {
+    else {
         if (value.length > index) {
             value[index] = answerScore;
         }
