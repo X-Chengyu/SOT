@@ -175,10 +175,10 @@ const vocabulary = {
 const currentPage = window.location.pathname.split('/').pop();
 let currentLang = 'zh-CN';
 
-if (currentPage === 'jp.html') {
+if (currentPage === 'jp.html' || currentPage === "jp") {
     currentLang = 'jp';
 }
-else if (currentPage === 'en.html') {
+else if (currentPage === 'en.html' || currentPage === "en") {
     currentLang = 'en';
 }
 
