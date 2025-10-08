@@ -128,15 +128,15 @@ const dimension = {
 
 const options = {
     "zh-CN":
-        ["经常", "很少", "从未"],
+        ["经常", "很少", "从未", "返回"],
     "jp":
-        ["よく当てはまる", "たまに当てはまる", "全く当てはまらない"]
+        ["よく当てはまる", "たまに当てはまる", "全く当てはまらない", "戻る"]
 };
 const optionScores = {
     "zh-CN":
-        { "经常": 5, "很少": 2, "从未": 0 },
+        { "经常": 5, "很少": 2, "从未": 0, "返回": -1 },
     "jp":
-        { "よく当てはまる": 5, "たまに当てはまる": 2, "全く当てはまらない": 0 }
+        { "よく当てはまる": 5, "たまに当てはまる": 2, "全く当てはまらない": 0, "戻る": -1 }
 };
 
 // 词汇表
@@ -175,14 +175,17 @@ const vocabulary = {
 const currentPage = window.location.pathname.split('/').pop();
 let currentLang = 'zh-CN';
 
-if (currentPage === 'jp.html' || currentPage === "jp") {
+if (currentPage === 'jp.html' || currentPage === 'jp') {
     currentLang = 'jp';
 }
-else if (currentPage === 'en.html' || currentPage === "en") {
+else if (currentPage === 'en.html' || currentPage === 'en') {
     currentLang = 'en';
 }
 
+// 实现返回功能：建立value数组
+let value = [];
 
+// 分数统计系统
 let currentQuestionIndex = 0;
 let score = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
 const totalQuestions = quizData[currentLang].length;
@@ -201,7 +204,7 @@ function startQuiz() {
     homeScreen.style.display = 'none';
     quizScreen.style.display = 'block';
     currentQuestionIndex = 0;
-    let score = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+    score = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
     loadQuestion(currentQuestionIndex);
 }
 
@@ -231,14 +234,20 @@ function loadQuestion(index) {
 
 // 答题器
 function selectAnswer(answerScore, index) {
-    if (scoringCategories[index] >= 1 && scoringCategories[index] <= 5) {
-        score[scoringCategories[index]] += answerScore;
+    if (answerScore == -1 && index >= 1) {
+        currentQuestionIndex--;
     }
-    else if (scoringCategories[index] == -5) {
-        score[5] -= answerScore;
+    else {
+        if (value.length > index) {
+            value[index] = answerScore;
+        }
+        else {
+            value.push(answerScore);
+        }
+
+        currentQuestionIndex++;
     }
 
-    currentQuestionIndex++;
     loadQuestion(currentQuestionIndex);
 }
 
@@ -247,11 +256,24 @@ function showResult() {
     quizScreen.style.display = 'none';
     resultScreen.style.display = 'block';
 
+    for (var id = 0; id <= value.length; ++id) {
+        if (scoringCategories[id] >= 1 && scoringCategories[id] <= 5) {
+            score[scoringCategories[id]] += value[id];
+        }
+        else if (scoringCategories[id] == -5) {
+            score[5] -= value[id];
+        }
+    }
+
     if (score[5] < 0) {
         score[5] = 0;
     }
 
     totalScore = score[1] + score[2] + score[3] + score[4] + score[5]; // 计算总分
+
+    if (totalScore == 0) {
+        score[4] = totalScore = 1;
+    }
 
     let resultText = `${vocabulary[currentLang].result_opener}\n`;
     resultText += `${vocabulary[currentLang].result_hetero}：${Math.round(score[1] / totalScore * 100)}%\n`;
