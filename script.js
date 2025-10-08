@@ -237,7 +237,7 @@ function selectAnswer(answerScore, index) {
     if (answerScore == -1 && index >= 1) {
         currentQuestionIndex--;
     }
-    else {
+    else if (answerScore != -1) {
         if (value.length > index) {
             value[index] = answerScore;
         }
