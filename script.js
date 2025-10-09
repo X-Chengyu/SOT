@@ -185,11 +185,11 @@ const dimension = {
 
 const options = {
     "zh-CN":
-        ["经常", "很少", "从未", "返回"],
+        ["经常", "很少", "从未", "返回上一题"],
     "jp":
-        ["よく当てはまる", "たまに当てはまる", "全く当てはまらない", "戻る"],
+        ["よく当てはまる", "たまに当てはまる", "全く当てはまらない", "前の問題に戻る"],
     "en":
-        ["Often", "Rarely", "Never", "Return"]
+        ["Often", "Rarely", "Never", "Previous question"]
 };
 const optionScores = {
     "zh-CN":
